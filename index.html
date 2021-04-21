@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">    
+    <title>Bebidas | BND</title>
+</head>
+<body>
+    <section>
+        <div class="circulo"></div>
+        <header>
+            <a href="#"><img src="img/logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu">
+
+            </div>
+            <ul class="navegacao">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </header>
+        <div class="container">
+            <div class="textBox">
+                <h2>Sinta o sabor!!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam mattis turpis maximus, pretium nunc in, vestibulum diam. Nulla vel neque lorem. Curabitur viverra egestas fringilla. Morbi porta mollis diam, in faucibus neque aliquet vel. Mauris ultrices semper malesuada. Aenean sollicitudin consequat velit in ultrices. Morbi posuere consequat diam ac congue. Donec velit mauris, euismod eget ullamcorper nec, fringilla quis nibh. In aliquam ultrices ante, sed venenatis nulla sodales eu. Proin quam lacus, commodo vitae porta ut, molestie in nisi. Fusce vitae erat eget tortor porta venenatis. Quisque condimentum ante felis, sit amet fringilla lacus tincidunt ut. Curabitur faucibus, felis nec blandit varius, libero elit cursus lacus, et sollicitudin sapien nunc eleifend ante. Nullam sit amet diam dolor.</p>
+                <a href="#">Leia Mais</a>
+            </div>
+            <div class="imgBox">
+                <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><img src="img/cocacola1.png"></div>
+                          <div class="swiper-slide"><img src="img/cocacola2.png"></div>
+                          <div class="swiper-slide"><img src="img/cocacola3.png"></div>
+                          <div class="swiper-slide"><img src="img/cocacola4.png"></div>
+                          <div class="swiper-slide"><img src="img/cocacola5.png"></div>
+                          <div class="swiper-slide"><img src="img/cocacola6.png"></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <ul class="social">
+            <li><a href="#"><img src="img/facebook.png"></a></li>
+            <li><a href="#"><img src="img/instagram.png"></a></li>
+            <li><a href="#"><img src="img/twitter.png"></a></li>
+
+        </ul>
+    </section>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            effect: 'coverflow',
+            grabcursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffects:{
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            loop: true,
+        });
+
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            const navegacao  = document.querySelector('.navegacao')
+            menuToggle.classList.toggle('active')
+            navegacao.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
